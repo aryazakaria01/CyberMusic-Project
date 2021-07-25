@@ -31,30 +31,30 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Tambahkan saya sebagai admin grup Anda terlebih dahulu</b>",
+            "<b>Add me as your group admin first</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "@SaitamaHelper"
 
     try:
         await USER.join_chat(invitelink)
     except UserAlreadyParticipant:
         await message.reply_text(
-            f"<b>{user.first_name} sudah ada di obrolan Anda</b>",
+            f"<b>{user.first_name} already in your chat</b>",
         )
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>Flood Wait Error\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-            "\n\nAtau tambahkan Assistant bot secara manual ke Grup Anda dan coba lagi.</b>",
+            f"<b>Flood Wait Error\n{user.first_name} can't join your group due to many join requests for userbot! Make sure the user is not banned in the group."
+            "\n\nOr manually add the Assistant bot to your Group and try again.</b>",
         )
         return
     await message.reply_text(
-        f"<b>{user.first_name} berhasil bergabung dengan obrolan Anda</b>",
+        f"<b>{user.first_name} successfully joined your chat</b>",
     )
 
 
@@ -65,8 +65,8 @@ async def rem(USER, message):
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
-            f"<b>Pengguna tidak dapat meninggalkan grup Anda! Mungkin menunggu floodwaits."
-            "\n\nAtau keluarkan saya secara manual dari ke Grup Anda</b>",
+            f"<b>Users cannot leave your group! Probably waiting for floodwaits."
+            "\n\nOr manually remove me from your Group</b>",
         )
         return
     
@@ -77,7 +77,7 @@ async def bye(client, message):
 
     left=0
     failed=0
-    lol = await message.reply("**Asisten Meninggalkan semua obrolan**")
+    lol = await message.reply("**Assistant Leave all chats**")
     async for dialog in USER.iter_dialogs():
         try:
             await USER.leave_chat(dialog.chat.id)
@@ -99,37 +99,37 @@ async def addcchannel(client, message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Apakah obrolan terhubung?")
+      await message.reply("Is the chat connected?")
       return    
     chat_id = chid
     try:
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Tambahkan saya sebagai admin saluran Anda terlebih dahulu</b>",
+            "<b>Add me as your channel admin first</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "@SaitamaHelper"
 
     try:
         await USER.join_chat(invitelink)
     except UserAlreadyParticipant:
         await message.reply_text(
-            f"<b>{user.first_name} sudah ada di channel anda</b>",
+            f"<b>{user.first_name} already on your channel</b>",
         )
         return
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>Flood Wait Error\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-            "\n\nAtau tambahkan Assistant bot secara manual ke Grup Anda dan coba lagi.</b>",
+            f"<b>Flood Wait Error\n{user.first_name} can't join your group due to many join requests for userbot! Make sure the user is not banned in the group."
+            "\n\nOr add the Assistant bot manually to your Group and try again.</b>",
         )
         return
     await message.reply_text(
-        f"<b>{user.first_name} sudah bergabung dengan obrolan Anda</b>",
+        f"<b>{user.first_name} already joined your channel</b>",
     )
     
