@@ -20,47 +20,37 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**Hey 👋 Selamat datang kembali di {PROJECT_NAME}
-
-✣️ {PROJECT_NAME} dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.
-
-✣️ Assistant Music » @{ASSISTANT_NAME}\n\nKlik Next untuk instruksi**
-
+**Hey 👋 Welcome again in {PROJECT_NAME}
+✣️ {PROJECT_NAME} can Play Songs in Group Voice Chat In Easy way.
+✣️ Assistant Music » @{ASSISTANT_NAME}\n\nClick Next for instructions**
 """,
 
 f"""
-**Pengaturan**
-
-1. Jadikan bot sebagai admin
-2. Mulai obrolan suara / VCG
-3. Ketik `/userbotjoin` dan coba /play <nama lagu>
-× Jika Assistant Bot bergabung selamat menikmati musik, 
-× Jika Assistant Bot tidak bergabung Silahkan Tambahkan @{ASSISTANT_NAME} ke grup Anda dan coba lagi
-
-
-**» Perintah Untuk dalam grup Member Juga Bisa :**
-
- × /playlist : Untuk Menampilkan daftar putar Lagu sekarang
- × /current : Untuk Menunjukkan  Lagu sekarang yang sedang diputar
- × /song <judul lagu> : Untuk Mendownload lagu di YouTube 
- × /video <judul lagu> : Untuk Mendownload Video di YouTube dengan detail
- × /vsong <judul lagu> : Untuk Mendownload Video di YouTube dengan detail
- × /deezer <judul lagu> : Untuk Mendownload lagu dari deezer 
- × /saavn <judul lagu> : Untuk Mendownload lagu dari website saavn
- × /search <judul lagu> : Untuk Mencari Video di YouTube dengan detail
-
-**» Perintah Hanya Untuk Admin :**
-
-× /play <judul lagu> : Untuk Memutar lagu yang Anda minta melalui youtube
-× /play <link yt> : Untuk Memutar lagu yang Anda minta melalui link youtube
-× /play <reply ke audio> : Untuk Memutar lagu yang Anda minta melalui file audio
-× /dplay : Untuk Memutar lagu yang Anda minta melalui deezer
-× /splay : Untuk Memutar lagu yang Anda minta melalui jio saavn
-× /skip : Untuk Menskip pemutaran lagu ke Lagu berikutnya
-× /pause : Untuk Menjeda pemutaran Lagu
-× /resume : Untuk Melanjutkan pemutaran Lagu yang di pause
-× /end : Untuk Memberhentikan pemutaran Lagu
-× /userbotjoin - Untuk Mengundang asisten ke obrolan Anda
-× /admincache - Untuk MemRefresh admin list
+**Settings**
+1. Make bot as admin
+2. Start voice chat / VCG
+3. Type `/userbotjoin` and try /play <song name>
+× If Assistant Bot joins enjoy music,
+× If Assistant Bot doesn't join Please Add @{ASSISTANT_NAME} to your group and try again
+**» Commands for members in the group can also :**
+ × /req <song title> : To Play the song you requested via youtube
+ × /ytreq <link yt> : To Play the song you requested via the youtube link
+ × /dplay : To Play the song you requested via deezer
+ × /splay : To Play the song you requested via jio saavn
+ × /playlist : To Display the current Song playlist
+ × /current : Shows the current song currently playing
+ × /song <song title> : To Download songs on YouTube
+ × /video <song title> : To Download Videos on YouTube with details
+ × /vsong <song title> : To Download Videos on YouTube with details
+ × /deezer <song title> : To Download songs from deezer
+ × /saavn <song title> : To Download songs from the saavn website
+ × /search <song title> : To Search Videos on YouTube with details
+**» Commands Only For Admin and Sudo:**
+× /skip : To Skip playback of the song to the next Song
+× /pause : To Pause Song playback
+× /resume : To resume playback of the paused song
+× /end : To Stop Song playback pemutaran
+× /userbotjoin - To Invite assistant to your chat
+× /admincache - To Refresh admin list
 """
       ]
