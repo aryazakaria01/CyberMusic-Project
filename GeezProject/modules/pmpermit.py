@@ -32,7 +32,7 @@ async def pmPermit(client: USER, message: Message):
             return
         await USER.send_message(
             message.chat.id,
-            f"Halo, Saya adalah **Layanan Asistant {PROJECT_NAME}.**\n\n ❗️ **Rules:**\n   - Jangan Spam Pesan disini\n   - Jangan Spam Lagu Biar Ga Error\n   - Tutorial Cara Menggunakan bot Lihat di @{UPDATES_CHANNEL} \n\n 👉 **KIRIM LINK INVITE ATAU USERNAME GRUP, JIKA ASSISTANT TIDAK DAPAT BERGABUNG DENGAN GRUP ANDA.**\n\n ⛑ **Group Support :** @{SUPPORT_GROUP} - **Owner** {OWNER}\n\n",
+            f"Hello, I am **Service Assistant {PROJECT_NAME}.**\n\n ❗️ **Rules:**\n - Don't Spam Message Here\n - Don't Spam Songs So No Errors\n - Tutorial How To Use Bots Look at @{UPDATES_CHANNEL} \n\n 👉 **SEND INVITE LINK OR GROUP USERNAME, IF ASSISTANT CANNOT JOIN YOUR GROUP.**\n\n ⛑ **Group Support :** @{SUPPORT_GROUP} - **Owner** {OWNER}\n\n",
         )
         return
 
@@ -46,11 +46,11 @@ async def bye(client: Client, message: Message):
         queryy = text[1]
         if queryy == "on":
             PMSET = True
-            await message.reply_text("**Pmpermit dinyalakan**")
+            await message.reply_text("**Pmpermit turn on**")
             return
         if queryy == "off":
             PMSET = None
-            await message.reply_text("**Pmpermit dimatikan**")
+            await message.reply_text("**Pmpermit turn off**")
             return
 
 @USER.on_message(filters.text & filters.private & filters.me)
@@ -58,7 +58,7 @@ async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if chat_id not in pchats:
         pchats.append(chat_id)
-        await message.reply_text("Disetujui untuk Private Message")
+        await message.reply_text("Approve for Private Message")
         return
     message.continue_propagation()    
     
@@ -67,7 +67,7 @@ async def pmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if chat_id not in pchats:
         pchats.append(chat_id)
-        await message.reply_text("Disetujui untuk Private Message")
+        await message.reply_text("Approve for Private Message")
         return
     message.continue_propagation()    
     
@@ -77,6 +77,6 @@ async def rmpmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if chat_id in pchats:
         pchats.remove(chat_id)
-        await message.reply_text("Maaf anda Ditolak untuk Private Message")
+        await message.reply_text("Sorry you Disapprove for Private Message")
         return
     message.continue_propagation()    
