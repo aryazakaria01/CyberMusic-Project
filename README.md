@@ -1,8 +1,8 @@
-<h1 align="centre">🎵 UserLazy Music Projects 🎵</h1>
+<h1 align="centre">🎵 Cyber Music Projects 🎵</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@UserLazyXBot](https://t.me/UserLazyXBot)
+### Available on telegram as [Arya Zakaria](https://t.me/Badboyanim)
 
 <h2> Features </h2>
 
@@ -21,7 +21,7 @@
 ### ⚔ Self-hosting (For Devs) 
 ```sh
 # Install Git First (apt-instll git)
-$ git clone https://github.com/UserLazy/UserLazy-MusicVCG
+$ git clone https://github.com/aryazakaria01/CyberMusic-Project
 $ cd Geez-MusicProject
 # Upgrade sources
 # Install All Requirements 
@@ -34,7 +34,7 @@ $ python(3) -m GeezProject
 
 ### 💜 Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/UserLazy/UserLazy-MusicVCG/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/aryazakaria01/CyberMusic-Project/tree/master)
 
 Get pyrogram (p)  `SESSION` from here:
 [![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@vckyou/Geez-String-Session?lite=1&outputonly=1)
