@@ -29,7 +29,7 @@ from GeezProject.helpers.filters import command, other_filters
 from GeezProject.services.callsmusic import callsmusic
 
 
-@Client.on_message(filters.command("adminreset"))
+@Client.on_message(filters.command("reload"))
 async def update_admin(client, message: Message):
     chat_id = get_chat_id(message.chat)
     set(
@@ -42,7 +42,7 @@ async def update_admin(client, message: Message):
         ),
     )
 
-    await message.reply_text("✅️ Admin cache refreshed!")
+    await message.reply_text("✅️ Admin reload!")
 
 
 @Client.on_message(command(["pause", "jeda"]) & other_filters)
@@ -50,15 +50,15 @@ async def update_admin(client, message: Message):
 @authorized_users_only
 async def pause(_, message: Message):
     callsmusic.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_text("⏸ Music Di Hentikan Sementara.")
+    await message.reply_text("⏸ Music paused.")
 
 
-@Client.on_message(command(["resume", "lanjut"]) & other_filters)
+@Client.on_message(command(["resume", "next"]) & other_filters)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
     callsmusic.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_text("▶️ Music Dilanjut.")
+    await message.reply_text("▶️ Music resume.")
 
 
 @Client.on_message(command(["end", "stop"]) & other_filters)
@@ -71,7 +71,7 @@ async def stop(_, message: Message):
        pass
 
     callsmusic.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_text("❌ **Menghentikan Lagu!**")
+    await message.reply_text("❌ **Stop Music!**")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -82,10 +82,10 @@ async def skip(_, message: Message):
     chat_id = get_chat_id(message.chat)
 
     callsmusic.queues.task_done(message.chat.id)
-    await message.reply_text("⏩ Melanjut Ke Antrian Selanjutnya.")
+    await message.reply_text("⏩ Continue to Next Queue.")
     if callsmusic.queues.is_empty(message.chat.id):
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("Music Dihentikan, Antrian Tidak Terdeteksi")
+        await message.reply_text("Music Stopped, Queue Not Detected")
     else:
         callsmusic.pytgcalls.change_stream(
                 message.chat.id,
@@ -109,4 +109,4 @@ async def admincache(client, message: Message):
         ),
     )
 
-    await message.reply_text("✅️ **Daftar admin** telah **diperbarui**")
+    await message.reply_text("✅️ **List admin** is **updated**")
