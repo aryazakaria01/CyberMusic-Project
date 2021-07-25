@@ -453,7 +453,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "UserLazy"
+        user.first_name = "aryazakaria01"
     usar = user
     wew = usar.id
     try:
@@ -530,8 +530,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/zonagreenland"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/CyberSupportGroup"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/CyberMusicProject"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -577,8 +577,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/zonagreenland"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/CyberSupportGroup"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/CyberMusicProject"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -656,8 +656,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/zonagreenland"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/CyberSupportGroup"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/CyberMusicProject"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -794,8 +794,8 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/zonagreenland"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/CyberSupportGroup"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/CyberMusicProject"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -1024,8 +1024,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/zonagreenland"),
-                    InlineKeyboardButton("🛡️ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/CyberSupportGroup"),
+                    InlineKeyboardButton("🛡️ Channel", url="https://t.me/CyberMusicProject"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
