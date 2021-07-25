@@ -113,7 +113,7 @@ def r_ply(type_):
         [
             [
                 InlineKeyboardButton("⏹", "cleave"),
-                InlineKeyboardButton("⏸", "cpuse"),
+                InlineKeyboardButton("⏸", "cpause"),
                 InlineKeyboardButton("▶️", "cresume"),
                 InlineKeyboardButton("⏭", "cskip"),
             ],
@@ -301,7 +301,7 @@ async def m_cb(b, cb):
             [
                 [
                     InlineKeyboardButton("⏹", "cleave"),
-                    InlineKeyboardButton("⏸", "cpuse"),
+                    InlineKeyboardButton("⏸", "cpause"),
                     InlineKeyboardButton("▶️", "cresume"),
                     InlineKeyboardButton("⏭", "cskip"),
                 ],
@@ -558,8 +558,8 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"🏷 **Title:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Queued at `{position}`\n" \
+                    + f"🎼 **Request by:** {message.from_user.mention}",
                    reply_markup=keyboard)
     else:
         chat_id = chid
@@ -574,8 +574,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"🏷 **Judul:** [{title[:60]}]({url})\n**⏱ Durasi:** {duration}\n" \
-                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
+            caption=f"🏷 **Title:** [{title[:60]}]({url})\n**⏱ Duration:** {duration}\n" \
+                + f"💡 **Status:** Playing\n🎧 **Request:** {requested_by}".format(
         message.from_user.mention()
         ),
     )
@@ -605,7 +605,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "Asisten"
     usar = user
     wew = usar.id
     try:
@@ -690,7 +690,7 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"🎼 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
+        await res.edit_text(f"🎼 **The song you requested is Queuing in position** `{position}`")
     else:
         await res.edit_text(f"✯{bn}✯=▶️ Playing.....")
 
@@ -767,7 +767,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add Asistan to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -800,7 +800,7 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
+                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Channel", url="https://t.me/CyberMusicProject"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
