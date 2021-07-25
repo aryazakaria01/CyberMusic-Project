@@ -56,10 +56,10 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "🎈 Group Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "Zona Greenland", url=f"https://{SOURCE_CODE}")
+                        "CyberSupportGroup", url=f"https://{SOURCE_CODE}")
                 ],[
                     InlineKeyboardButton(
-                        "🎁 Donate", url=f"https://t.me/RxyMX")
+                        "🎁 Donate", url=f"https://t.me/Badboyanim")
                 ]
             ]
         ),
@@ -101,7 +101,7 @@ def map(pos):
             [InlineKeyboardButton("➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '💬 Channel Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '🔰 Group Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = 'Zona Greenland', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton(text = 'CyberSupportGroup', url=f"https://{SOURCE_CODE}")],
             [InlineKeyboardButton(text = '«', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -149,7 +149,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/IhsanBio/62"
+                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/CyberMusicProject/4"
                     )
                 ]
             ]
@@ -168,10 +168,10 @@ async def reload(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Group Support", url=f"https://t.me/odasupport"
+                        "Group Support", url=f"https://t.me/CyberSupportGroup"
                     ),
                     InlineKeyboardButton(
-                        "Created By", url=f"https://t.me/rxymx"
+                        "Created By", url=f"https://t.me/Badboyanim"
                     )
                 ]
             ]
